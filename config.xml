@@ -13,11 +13,21 @@
 	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="AllowInlineMediaPlayback" value="true" />
+	<preference name="phonegap-version" value="cli-9.0.0" />
 
 	<config-file parent="UIStatusBarHidden" platform="ios" target="*-Info.plist"><true/></config-file>
 	<config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ios" target="*-Info.plist"><false/></config-file>
 
-
+	<widget xmlns:android="http://schemas.android.com/apk/res/android">
+		<platform name="android">
+		    <config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.CAMERA" />
+			<uses-feature android:name="android.hardware.camera" />
+			<uses-feature android:name="android.hardware.camera.autofocus" />
+		    </config-file>
+		</platform>
+	</widget>
+	
 	<preference name="deployment-target" value="10.0" />
 	<preference name="android-minSdkVersion" value="21" />
 	<access origin="*" />

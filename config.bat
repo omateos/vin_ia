@@ -1,0 +1,1 @@
+copy c.xml config.xml
